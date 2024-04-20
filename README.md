@@ -20,14 +20,26 @@ apt install aria2 -y
 ftp.sh
 ```
 
-## assembleの実行
-
-
-## データベースの作成
-docker環境で以下のコマンドを実行
+# biocondaで必要なライブラリーの取得
 ```docker
-conda create -n blast -y
-conda activate blast
-conda install -c bioconda blast -y
+conda create -n genome_pipline -y
+conda activate genome_pipline
+bash library.sh
 ```
 
+## assembleの実行, roaryによるパンゲノム解析
+docker環境で以下のパイプラインの実行
+```docker
+bash pipline.sh
+```
+
+## アクネ菌病原性遺伝子のBLAST
+docker環境で以下のコマンドを実行
+```docker
+
+```
+
+## BLAST結果の解析と可視化
+```docker
+
+```
